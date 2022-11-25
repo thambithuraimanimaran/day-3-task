@@ -1,0 +1,97 @@
+1. JSON iterate over all for loops:
+var obj ={
+    name: "dhurai",
+    age: 25,
+    gender:"male",
+    attendance:["mon","tue","wed","thur","fri"]
+}
+ for(var i =0;i<obj.attendance.length;i++){
+    console.log(obj.attendance[i]);
+ }
+ OUTPUT:
+ mon
+ tue
+ wed
+ thur
+ fri
+ FOR IN LOOP:
+ var obj ={
+    name: "dhurai",
+    age: 25,
+    gender:"male",
+    attendance:["mon","tue","wed","thur","fri"]
+}
+for(var i in obj.attendance)
+{
+    console.log(i , obj.attendance[i]);
+}
+OUTPUT:
+0 mon
+1 tue
+2 wed
+3 thur
+4 fr
+
+
+
+
+2.create your own resume data in JSON format
+var resume ={
+    name: "dhurai",
+    age: 25,
+    gender:"male",
+    qualification:["10th","12th","degeree"],
+    location:"chennai",
+    experience:"5years experience in sales department",
+    languages_known:["tamil","english"]
+}
+ console.log(resume);
+ OUTPUT :
+ {name: 'dhurai', age: 25, gender: 'male', qualification: Array(3), location: 'chennai', …}
+age
+: 
+25
+experience
+: 
+"5years experience in sales department"
+gender
+: 
+"male"
+languages_known
+: 
+(2) ['tamil', 'english']
+location
+: 
+"chennai"
+name
+: 
+"dhurai"
+qualification
+: 
+(3) ['10th', '12th', 'degeree']
+[[Prototype]]
+: 
+Object
+
+
+3. Difference between window,screen and document:
+window:
+ -window is the execution context and global object for that context's javascript.
+ -each browser is own top-level window object.
+ -location giving the current URL.
+ -history with method back and forward giving the tab's mutable history.
+ -navigator describing the browser software.
+
+screen:
+ -the window object also has a screen object with properties describing the physical display.
+ -screen properties width and height are the full screen.
+ -screen properties availwidth and availheight omit the toolbar.
+ -screen or just screen is a small information object about physical screen dimension.
+ -element will return an object with top,left,bottom,and right properties.
+
+Document:
+ -each window object has a document object to be rendered.
+ -these object get confused in part because HTML elements are added to the global object.
+ -the main object of the potentially visible document object model/DOM
+ -document can also be window.document, screen can be window.screen, and window can be window.
+ -document contains the DOM, initialized by parsing HTML.
